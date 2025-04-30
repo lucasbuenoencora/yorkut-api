@@ -23,7 +23,8 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Yorkut - Social Media API - Powered by
+[Nest](https://github.com/nestjs/nest) framework TypeScript
 
 ## Project setup
 
