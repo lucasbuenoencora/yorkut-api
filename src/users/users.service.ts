@@ -50,4 +50,23 @@ export class UsersService {
   async remove(id: number): Promise<void> {
     await this.usersRepository.delete(id);
   }
+
+  async getAllFriendsById(id: number): Promise<User[] | null> {
+    return this.usersRepository.find({
+      select: {
+        firstName: true,
+        lastName: true,
+        friends: {
+          firstName: true,
+          lastName: true,
+        },
+      },
+      where: {
+        id,
+      },
+      relations: {
+        friends: true,
+      },
+    });
+  }
 }

@@ -32,4 +32,9 @@ export class UsersController {
   addFriend(@Body() addFriendDto: AddFriendDto): Promise<string> {
     return this.usersService.addFriend(addFriendDto);
   }
+
+  @Get('friends/:id')
+  getAllFriendsById(@Param('id') id: number): Promise<User[] | null> {
+    return this.usersService.getAllFriendsById(id);
+  }
 }
